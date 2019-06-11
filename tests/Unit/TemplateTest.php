@@ -132,4 +132,22 @@ class TemplateTest extends TestCase
     }
 
 
+    /**
+     * @test
+     */
+    public function create_a_sample_grid_pdf_for_template()
+    {
+
+        $settings = $this->getSettingsFromJsonFile('only_one_page_no_changes.json');
+        $templateFile = $this->getFilePath('template_two_pages.pdf');
+        $template = Template::create($settings, $templateFile);
+
+        $pages = (new Fpdi())->setSourceFile(fopen($templateFile, 'r'));
+
+        $this->assertStringContainsString('%PDF-1.7', $template->makeGrid($pages));
+
+
+    }
+
+
 }

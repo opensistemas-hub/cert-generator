@@ -76,6 +76,20 @@ class Template
         return $builder->generate($path);
     }
 
+    public function makeGrid($pages = 1)
+    {
+
+        $builder = new Builder();
+        for ($page = 1; $page <= $pages; $page++) {
+
+
+            $builder->readPageFromPdf($this->template, $page);
+            $builder->makeGrid();
+        }
+        return $builder->generateString();
+    }
+
+
     private function createPage(Builder $builder, $pdf, $pageNumber)
     {
         $builder->readPageFromPdf($pdf, $pageNumber);
