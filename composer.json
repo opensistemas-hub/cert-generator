@@ -15,8 +15,28 @@
     "setasign/fpdi-fpdf": "^2.0",
     "setasign/fpdi-tcpdf": "^2.0"
   },
+  "require-dev": {
+    "composer/composer": "^1.8",
+    "ext-xdebug": "*",
+    "mockery/mockery": "^1.0",
+    "phpunit/phpunit": "~8.0"
+  },
   "autoload": {
     "psr-4": {"Opensistemas\\CertGenerator\\": "src"}
-   }
+   },
+  "autoload-dev": {
+    "psr-4": {
+      "Tests\\": "tests/"
+    }
+  },
+  "scripts": {
+    "tests": "vendor/bin/phpunit",
+    "test-and-coverage": "vendor/bin/phpunit --configuration phpunit.xml --coverage-text --colors=never"
+  },
+  "config": {
+    "preferred-install": "dist",
+    "sort-packages": true,
+    "optimize-autoloader": true
+  }
 }
 
