@@ -126,8 +126,7 @@ class TemplateTest extends TestCase
         $tempFile = tempnam(sys_get_temp_dir(), 'test') . '.pdf';
 
         $template->generate($tempFile, []);
-
-        $this->fileExists($tempFile);
+        $this->assertFileExists($tempFile);
 
 
     }
