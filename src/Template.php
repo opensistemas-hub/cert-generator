@@ -1,10 +1,10 @@
 <?php
 
-namespace Opensitemas\CertGenerator;
+namespace Opensistemas\CertGenerator;
 
 
-use Opensitemas\CertGenerator\Elements\Text;
-use Opensitemas\CertGenerator\Elements\TextBox;
+use Opensistemas\CertGenerator\Elements\Text;
+use Opensistemas\CertGenerator\Elements\TextBox;
 
 class Template
 {
