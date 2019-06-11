@@ -1,6 +1,6 @@
 <?php
 
-namespace Opensitemas\CertGenerator;
+namespace Opensistemas\CertGenerator;
 
 use setasign\Fpdi\PdfReader;
 use setasign\Fpdi\Tcpdf\Fpdi;

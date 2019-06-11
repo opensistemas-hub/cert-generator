@@ -1,6 +1,6 @@
 <?php
 
-namespace Opensitemas\CertGenerator\Elements;
+namespace Opensistemas\CertGenerator\Elements;
 
 
 trait Renderable

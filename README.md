@@ -16,7 +16,7 @@ $vars = [
 
 ];
 
-$a = new \Graspway\CertGenerator\Template(__DIR__ . '/template1.json', __DIR__ . '/test.pdf', $vars);
+$a = new \Opensistemas\CertGenerator\Template(__DIR__ . '/template1.json', __DIR__ . '/test.pdf', $vars);
 
 
 print_r($a->generate(__DIR__, 'fake-id'));
