@@ -4,13 +4,14 @@ php:
 install:
 - travis_retry composer install --no-interaction --no-suggest
 script:
-- composer test-and-coverage
+- composer test-and-generate-coverage
 
 branches:
   only:
   - master
   - dev
-
+after_success:
+    - bash <(curl -s https://codecov.io/bash)
 cache:
   directories:
   - $HOME/.composer/cache

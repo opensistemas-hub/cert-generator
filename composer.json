@@ -34,7 +34,8 @@
   },
   "scripts": {
     "tests": "vendor/bin/phpunit",
-    "test-and-coverage": "vendor/bin/phpunit --configuration phpunit.xml --coverage-text --colors=never"
+    "test-and-coverage": "vendor/bin/phpunit --configuration phpunit.xml --coverage-text --colors=never",
+    "test-and-generate-coverage": "vendor/bin/phpunit --configuration phpunit.xml --coverage-clover=coverage.xml"
   },
   "config": {
     "preferred-install": "dist",
