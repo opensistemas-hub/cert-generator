@@ -16,9 +16,7 @@
     "setasign/fpdi-tcpdf": "^2.0"
   },
   "autoload": {
-    "psr-4": {
-      "Opensistemas\\CertGenerator\\": "src/"
-    }
-  }
+    "psr-4": {"Opensistemas\\CertGenerator\\": "src"}
+   }
 }
 
