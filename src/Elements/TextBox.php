@@ -18,18 +18,20 @@ class TextBox
     {
         $this->builder = $builder;
         $this->element = $element;
-        $this->vars    = $vars;
+        $this->vars = $vars;
     }
 
     public function render()
     {
 
-        if (isset($this->element->font)) {
-            $this->setFont($this->element->font);
+        if (isset($this->element['font'])) {
+            $this->setFont($this->element['font']);
         }
 
-        $this->builder->writeLongText($this->element->x, $this->element->y, $this->element->w, $this->element->h,
-            $this->getValue($this->element->value), $this->element->align);
+        $this->builder->writeLongText(
+            $this->element['x'], $this->element['y'], $this->element['w'], $this->element['h'],
+
+            $this->getValue($this->element['value']), $this->element['align']);
 
     }
 
