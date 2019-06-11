@@ -14,12 +14,12 @@ trait Renderable
 
         }
 
-        if (isset($this->vars[$item->key])) {
+        if (isset($this->vars[$item['key']])) {
 
-            return $this->vars[$item->key];
+            return $this->vars[$item['key']];
         }
 
-        return $item->key;
+        return $item['key'];
     }
 
 
@@ -27,13 +27,13 @@ trait Renderable
     {
 
 
-        if (isset($font->size)) {
-            $this->builder->setFontSize($font->size);
+        if (isset($font['size'])) {
+            $this->builder->setFontSize($font['size']);
         }
 
 
-        if (isset($font->bg)) {
-            list($r, $g, $b) = sscanf($font->bg, "#%02x%02x%02x");
+        if (isset($font['bg'])) {
+            list($r, $g, $b) = sscanf($font['bg'], "#%02x%02x%02x");
 
             $this->builder->SetFillColor($r, $g, $b);
 
@@ -41,9 +41,9 @@ trait Renderable
         }
 
 
-        if (isset($font->color)) {
+        if (isset($font['color'])) {
 
-            $this->builder->setTextColorArray(sscanf($font->color, "#%02x%02x%02x"));
+            $this->builder->setTextColorArray(sscanf($font['color'], "#%02x%02x%02x"));
         }
     }
 

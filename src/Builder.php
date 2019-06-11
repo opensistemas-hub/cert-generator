@@ -16,14 +16,14 @@ class Builder extends Fpdi
 
     public function makeGrid()
     {
-        $width     = $this->getPageWidth();
-        $height    = $this->getPageHeight();
+        $width = $this->getPageWidth();
+        $height = $this->getPageHeight();
         $base_line = array('width' => .3, 'cap' => 'round', 'join' => 'round', 'color' => array(0, 0, 0));
         $secondary = array('width' => 0.1, 'cap' => 'butt', 'join' => 'miter', 'dash' => 1, 'color' => array(0, 0, 0));
         $this->SetFont('helvetica', '', 7);
         $this->SetFillColor(255, 255, 215);
         $this->SetTextColor(0, 0, 0);
-        $step    = 10;
+        $step = 10;
         $midText = 2;
         for ($i = 0; $i < $height - $step; $i += $step) {
             if ($i !== 0) {
@@ -131,13 +131,18 @@ class Builder extends Fpdi
     public function readPageFromPdf($sourceFile, $pageNum)
     {
         $pageCount = $this->setSourceFile($sourceFile);
-        $pageId    = $this->importPage($pageNum, PdfReader\PageBoundaries::MEDIA_BOX);
+        $pageId = $this->importPage($pageNum, PdfReader\PageBoundaries::MEDIA_BOX);
         $this->addPage();
         $this->SetMargins(0, 0, 0, true); // put space of 10 on top
         $this->SetAutoPageBreak(true, 0);
         $this->useTemplate($pageId, ['adjustPageSize' => true]);
 
         return $this;
+    }
+
+    public function generateString()
+    {
+        return $this->Output(null, 'S');
     }
 
     public function generate($path)

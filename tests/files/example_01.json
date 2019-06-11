@@ -1,34 +1,3 @@
-
-
-
-
-Example usage:
-
-```PHP
-<?php
-
-require_once __DIR__ . '/vendor/autoload.php'; // Autoload files using Composer autoload
-
-
-$vars = [
-    'full_name'   => "Antonio Cortés",
-    'course_name' => "Mi nombre de curso",
-
-];
-
-$settings = json_decode( __DIR__ . '/template1.json' , true );
-
-$template = \Opensistemas\CertGenerator\Template::create( $settings, __DIR__ . '/test.pdf' ) ;
-
-$template->generate( 'my.pdf', $vars  );
-
-```
-
-
-template1.json
-
-```json
-
 {
   "pages": [
     {
@@ -100,6 +69,3 @@ template1.json
     }
   ]
 }
-
-
-```
