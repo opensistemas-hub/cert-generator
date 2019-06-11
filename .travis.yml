@@ -1,0 +1,16 @@
+language: php
+php:
+- 7.2
+install:
+- travis_retry composer install --no-interaction --no-suggest
+script:
+- composer test-and-coverage
+
+branches:
+  only:
+  - master
+  - dev
+
+cache:
+  directories:
+  - $HOME/.composer/cache
