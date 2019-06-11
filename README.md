@@ -16,10 +16,12 @@ $vars = [
 
 ];
 
-$a = new \Opensistemas\CertGenerator\Template(__DIR__ . '/template1.json', __DIR__ . '/test.pdf', $vars);
+$settings = json_decode( __DIR__ . '/template1.json' , true );
 
+$template = \Opensistemas\CertGenerator\Template::create( $settings, __DIR__ . '/test.pdf' ) ;
 
-print_r($a->generate(__DIR__, 'fake-id'));
+$template->generate( 'my.pdf', $vars  );
+
 ```
 
 
