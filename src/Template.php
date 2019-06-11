@@ -57,10 +57,8 @@ class Template
         }
 
         $destFile = $path . '/' . $id . '.pdf';
-
         $builder->generate($destFile);
-
-        return $path . '/' . $this->id . '.pdf';
+        return $destFile ;
 
     }
 
