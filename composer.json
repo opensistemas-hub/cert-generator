@@ -12,7 +12,7 @@
   "minimum-stability": "dev",
   "require": {
     "php": ">=7.2.0",
-    "ramsey/uuid": "^4.0@dev",
+    "ramsey/uuid": "^3.8.0",
     "setasign/fpdi-fpdf": "^2.0",
     "setasign/fpdi-tcpdf": "^2.0"
   },
