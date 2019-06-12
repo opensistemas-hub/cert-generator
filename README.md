@@ -1,5 +1,6 @@
 
-[![Build Status](https://travis-ci.org/opensistemas-hub/cert-generator.svg?branch=master)](https://travis-ci.org/opensistemas-hub/cert-generator)  [![Latest Stable Version](https://poser.pugx.org/opensistemas-hub/cert-generator/v/stable)](https://packagist.org/packages/opensistemas-hub/cert-generator)  [![License](https://poser.pugx.org/opensistemas-hub/cert-generator/license)](https://packagist.org/packages/opensistemas-hub/cert-generator) [![codecov](https://codecov.io/gh/opensistemas-hub/cert-generator/branch/master/graph/badge.svg)](https://codecov.io/gh/opensistemas-hub/cert-generator)
+[![Build Status](https://travis-ci.org/opensistemas-hub/cert-generator.svg?branch=master)](https://travis-ci.org/opensistemas-hub/cert-generator) 
+ [![codecov](https://codecov.io/gh/opensistemas-hub/cert-generator/branch/master/graph/badge.svg)](https://codecov.io/gh/opensistemas-hub/cert-generator)
 
 
 
