@@ -40,6 +40,12 @@ trait Renderable
 
         }
 
+        if (isset($font['family'])) {
+
+            $this->builder->setFont( $font['family']);
+
+
+        }
 
         if (isset($font['color'])) {
 
