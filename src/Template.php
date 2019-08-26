@@ -6,6 +6,7 @@ namespace Opensistemas\CertGenerator;
 use Opensistemas\CertGenerator\Elements\Text;
 use Opensistemas\CertGenerator\Elements\TextBox;
 use Ramsey\Uuid\Uuid;
+use setasign\Fpdi\Fpdi;
 
 class Template
 {
@@ -76,8 +77,13 @@ class Template
         return $builder->generate($path);
     }
 
-    public function makeGrid($pages = 1)
+    public function makeGrid($pages = null )
     {
+
+        if ( empty( $pages)) {
+
+            $pages = (new Fpdi())->setSourceFile(fopen($this->template , 'r'));
+        }
 
         $builder = new Builder();
         for ($page = 1; $page <= $pages; $page++) {
@@ -88,6 +94,9 @@ class Template
         }
         return $builder->generateString();
     }
+
+
+
 
 
     private function createPage(Builder $builder, $pdf, $pageNumber)
